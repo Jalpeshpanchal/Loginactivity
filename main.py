@@ -53,7 +53,7 @@ class Mainwindow(QMainWindow):
 class secondwindow (QtWidgets.QWidget):
     def __init__(self):
         super(secondwindow, self).__init__()
-        loadUi("asuccessfulpage.ui",self)
+        loadUi("successpage.ui.ui",self)
         self.pushButton.clicked.connect(homepage)
 
 app=QApplication(sys.argv)
