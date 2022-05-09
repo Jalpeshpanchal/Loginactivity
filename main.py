@@ -13,17 +13,17 @@ def home():
     widget.addWidget(login)
     widget.setCurrentIndex(widget.currentIndex()+1)
 
+def homepage(self):
+        mala = Mainwindow()
+        widget.addWidget(mala)
+        widget.setCurrentIndex(widget.currentIndex() + 1) # 1 is number of time want to press button
+
 def error():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Information)
     msg.setText("Check Username Or Password")
     msg.setWindowTitle("Alert!")
-    retval = msg.exec_()
-
-def homepage(self):
-        mala = Mainwindow()
-        widget.addWidget(mala)
-        widget.setCurrentIndex(widget.currentIndex() + 1) # 1 is number of time want to press button
+    msg.exec_()
 
 #Login Activity
 class Mainwindow(QMainWindow):
@@ -47,7 +47,7 @@ class Mainwindow(QMainWindow):
         self.lineEdit_2.returnPressed.connect(lambda: do_action())
         def do_action():
             # getting text from the line edit
-            loginbutton = self.pushButton.clicked.connect(logincheck)
+            self.pushButton.clicked.connect(logincheck)
 
 #second Window to MainActivity
 class secondwindow (QtWidgets.QWidget):
