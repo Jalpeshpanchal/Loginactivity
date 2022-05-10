@@ -43,8 +43,8 @@ class Mainwindow(QMainWindow):
                 print("Account Login Successful")
                 home()
 
-        self.lineEdit.returnPressed.connect(lambda: do_action())
-        self.lineEdit_2.returnPressed.connect(lambda: do_action())
+        self.lineEdit.editingFinished.connect(lambda: do_action())
+        self.lineEdit_2.editingFinished.connect(lambda: do_action())
         def do_action():
             # getting text from the line edit
             self.pushButton.clicked.connect(logincheck)
